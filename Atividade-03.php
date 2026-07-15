@@ -7,7 +7,9 @@ Uma pessoa comprou arroz, feijão e leite. Armazene e calcule
 ● exiba o valor de cada item e o total.
 ● calcule e exiba o valor final após o desconto.
 ● Se o total da compra for maior que R$ 100,00, exiba: “Você ganhou um
-desconto de R$ 10,00. */
+desconto de R$ 10,00.
+● Se o total da compra for maior que R$ 100,00, exiba: “Você ganhou um 
+desconto de R$ 10,00.” Caso contrário, informe que não houve desconto. */
 
 //Processamento
 $produto1 = "Arroz";
@@ -27,9 +29,13 @@ $totalProduto3 = $quantidade3 * $preco3;
 
 $totalCompra = $totalProduto1 + $totalProduto2 + $totalProduto3;
 
+$desconto = 0;
+
 if ($totalCompra > 100) {
-    $frase = "Você ganhou um desconto de R$100,00";
+    $frase = "Você ganhou um desconto de R$10,00";
     $desconto = $totalCompra * 10 / 100;
+} else {
+    $frase = "Você ganhou nada!";
 }
 
 $totalcomdesconto = $totalCompra - $desconto;
@@ -48,17 +54,18 @@ $totalcomdesconto = $totalCompra - $desconto;
 <body>
     <h3>Atividade 3</h3>
     <p>
-    <p><?php echo ("Produto 1: " . $produto1 . " - Qtd: - " . $quantidade1 . " - Preço Unitário - " . $preco1) ?></p>
-    <p><?php echo ("Produto 2: " . $produto2 . " - Qtd: - " . $quantidade2 . " - Preço Unitário - " . $preco2) ?></p>
-    <p><?php echo ("Produto 3: " . $produto3 . " - Qtd: - " . $quantidade3 . " - Preço Unitário - " . $preco3) ?></p>
+    <p><?php echo ("Produto 1: " . $produto1 . " - Qtd: - " . $quantidade1 . " - Preço Unitário - " . $preco1); ?></p>
+    <p><?php echo ("Produto 2: " . $produto2 . " - Qtd: - " . $quantidade2 . " - Preço Unitário - " . $preco2); ?></p>
+    <p><?php echo ("Produto 3: " . $produto3 . " - Qtd: - " . $quantidade3 . " - Preço Unitário - " . $preco3); ?></p>
 
-    <p><?php echo ("Produto 1: " . $produto1 . " - Qtd: - " . $totalProduto1 . " - Preço Unitário - " . $preco1) ?></p>
-    <p><?php echo ("Produto 1: " . $produto2 . " - Qtd: - " . $totalProduto2 . " - Preço Unitário - " . $preco2) ?></p>
-    <p><?php echo ("Produto 1: " . $produto3 . " - Qtd: - " . $totalProduto3 . " - Preço Unitário - " . $preco3) ?></p>
+    <p><?php echo ("Produto 1: " . $produto1 . " - Qtd: - " . $totalProduto1 . " - Preço Unitário - " . $preco1); ?></p>
+    <p><?php echo ("Produto 1: " . $produto2 . " - Qtd: - " . $totalProduto2 . " - Preço Unitário - " . $preco2); ?></p>
+    <p><?php echo ("Produto 1: " . $produto3 . " - Qtd: - " . $totalProduto3 . " - Preço Unitário - " . $preco3); ?></p>
 
-    <p><?php echo ("Total da compra R$ " . $totalCompra) ?></p>
-    <p><?php echo ("Total do Desconto R$ " . $desconto) ?></p>
-    <p><?php echo ("Total sem Desconto R$ " . $totalcomdesconto ) ?></p>
+    <p><?php echo ("Total da compra R$ " . $totalCompra); ?></p>
+    <p><?php echo ("Total do Desconto R$ " . $desconto); ?></p>
+    <p><?php echo ("Total sem Desconto R$ " . $totalcomdesconto); ?></p>
+    <p><?php echo ("Frase: " . $frase); ?></p>
     </p>
 </body>
 
